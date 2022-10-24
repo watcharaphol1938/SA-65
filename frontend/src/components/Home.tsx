@@ -16,7 +16,7 @@ export default function Home() {
             <Paper>
                 <Box display="flex" sx={{ marginTop: 10, }}>
                     <Typography component="h2" variant="h4" color="primary" sx={{ marginTop: 2, marginBottom: 2, marginLeft: 39 }}>
-                        ระบบสมัครสมาชิก
+                        ระบบสมัครสมาชิก SA
                     </Typography>
                 </Box>
                 <Divider />
