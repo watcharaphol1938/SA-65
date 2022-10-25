@@ -22,37 +22,37 @@ func main() {
 			// User Routes
 			protected.GET("/users", controller.ListUsers)
 			protected.GET("/user/:id", controller.GetUser)
-			protected.PATCH("/users", controller.UpdateUser)
-			protected.DELETE("/users/:id", controller.DeleteUser)
+			// protected.PATCH("/users", controller.UpdateUser)
+			// protected.DELETE("/users/:id", controller.DeleteUser)
 			protected.POST("/users", controller.CreateUser)
 
 			// Province Routes
 			protected.GET("/provinces", controller.ListProvince)
 			protected.GET("/province/:id", controller.GetProvince)
 			protected.POST("/provinces", controller.CreateProvince)
-			protected.PATCH("/provinces", controller.UpdateProvince)
-			protected.DELETE("/provinces/:id", controller.DeleteProvince)
+			// protected.PATCH("/provinces", controller.UpdateProvince)
+			// protected.DELETE("/provinces/:id", controller.DeleteProvince)
 
 			// NamePrefix Routes
 			protected.GET("/nameprefixes", controller.ListNamePrefix)
 			protected.GET("/nameprefix/:id", controller.GetNamePrefix)
 			protected.POST("/nameprefixes", controller.CreateNamePrefix)
-			protected.PATCH("/nameprefixes", controller.UpdateNamePrefix)
-			protected.DELETE("/nameprefixes/:id", controller.DeleteNamePrefix)
+			// protected.PATCH("/nameprefixes", controller.UpdateNamePrefix)
+			// protected.DELETE("/nameprefixes/:id", controller.DeleteNamePrefix)
 
 			// Gender Routes
 			protected.GET("/genders", controller.ListGender)
 			protected.GET("/gender/:id", controller.GetGender)
 			protected.POST("/genders", controller.CreateGender)
-			protected.PATCH("/genders", controller.UpdateGender)
-			protected.DELETE("/genders/:id", controller.DeleteGender)
+			// protected.PATCH("/genders", controller.UpdateGender)
+			// protected.DELETE("/genders/:id", controller.DeleteGender)
 
 			// Employee Routes
 			protected.GET("/employees", controller.ListEmployee)
 			protected.GET("/employee/:id", controller.GetEmployee)
 			protected.POST("/employees", controller.CreateEmployee)
-			protected.PATCH("/employees", controller.UpdateEmployee)
-			protected.DELETE("/employees/:id", controller.DeleteEmployee)
+			// protected.PATCH("/employees", controller.UpdateEmployee)
+			// protected.DELETE("/employees/:id", controller.DeleteEmployee)
 		}
 	}
 

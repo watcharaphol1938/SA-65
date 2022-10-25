@@ -19,7 +19,7 @@ function Navbar() {
             to="/"
             sx={{ marginRight: "auto" }}>
           <Typography variant="h6" component="div">
-            System Analysis and Design
+            ระบบสมัครสมาชิก
           </Typography>
          </Button>
        </Toolbar>

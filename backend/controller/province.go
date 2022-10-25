@@ -43,32 +43,32 @@ func ListProvince(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"data": province})
 }
 
-// DELETE /provinces/:id
-func DeleteProvince(c *gin.Context) {
-	id := c.Param("id")
-	if tx := entity.DB().Exec("DELETE FROM users WHERE id = ?", id); tx.RowsAffected == 0 {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "user not found"})
-		return
-	}
-	c.JSON(http.StatusOK, gin.H{"data": id})
-}
+// // DELETE /provinces/:id
+// func DeleteProvince(c *gin.Context) {
+// 	id := c.Param("id")
+// 	if tx := entity.DB().Exec("DELETE FROM users WHERE id = ?", id); tx.RowsAffected == 0 {
+// 		c.JSON(http.StatusBadRequest, gin.H{"error": "user not found"})
+// 		return
+// 	}
+// 	c.JSON(http.StatusOK, gin.H{"data": id})
+// }
 
-// PATCH /provinces
-func UpdateProvince(c *gin.Context) {
-	var province entity.Province
-	if err := c.ShouldBindJSON(&province); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-		return
-	}
+// // PATCH /provinces
+// func UpdateProvince(c *gin.Context) {
+// 	var province entity.Province
+// 	if err := c.ShouldBindJSON(&province); err != nil {
+// 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+// 		return
+// 	}
 
-	if tx := entity.DB().Where("id = ?", province.ID).First(&province); tx.RowsAffected == 0 {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "province not found"})
-		return
-	}
+// 	if tx := entity.DB().Where("id = ?", province.ID).First(&province); tx.RowsAffected == 0 {
+// 		c.JSON(http.StatusBadRequest, gin.H{"error": "province not found"})
+// 		return
+// 	}
 
-	if err := entity.DB().Save(&province).Error; err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-		return
-	}
-	c.JSON(http.StatusOK, gin.H{"data": province})
-}
+// 	if err := entity.DB().Save(&province).Error; err != nil {
+// 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+// 		return
+// 	}
+// 	c.JSON(http.StatusOK, gin.H{"data": province})
+// }
