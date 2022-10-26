@@ -21,9 +21,6 @@ type User struct {
 	FirstName string
 	LastName  string
 
-	EmployeeID *uint
-	Employee   Employee `gorm:"references:ID"`
-
 	BirthDay       time.Time
 	Identification string `gorm:"uniqueIndex"`
 	Email          string `gorm:"uniqueIndex"`
@@ -36,7 +33,10 @@ type User struct {
 	Address string
 
 	ProvinceID *uint
-	Province   Province
+	Province   Province `gorm:"references:ID"`
+
+	EmployeeID *uint
+	Employee   Employee `gorm:"references:ID"`
 }
 
 // ตาราง Gender
